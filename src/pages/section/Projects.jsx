@@ -26,7 +26,7 @@ const Projects = () => {
     {
       name: "Myportofolio",
       img: porto,
-      link: "www.google.com",
+      link: "https://github.com/Dwifakhri/my-portfolio",
     },
   ];
   return (
