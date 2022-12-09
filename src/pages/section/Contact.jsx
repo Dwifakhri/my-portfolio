@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { GrMapLocation, GrInstagram } from "react-icons/gr";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gygnqb9",
+        "template_fvzrifs",
+        form.current,
+        "R95Hf_Bfguy6qS-K7"
+      )
+      .then((result) => {
+        alert("Message Sent");
+        e.target.reset();
+      });
+  };
   return (
     <>
       <div
@@ -37,13 +55,35 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 lg:pl-10 space-y-4 font-light text-md">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="lg:w-1/2 lg:pl-10 space-y-4 font-light text-md"
+          >
             <div className="flex space-x-4">
-              <CustomInput placeholder="Name" id="Name" />
-              <CustomInput placeholder="Email" id="Email" />
+              <CustomInput
+                type="text"
+                placeholder="Name"
+                id="Name"
+                name="name"
+              />
+              <CustomInput
+                type="email"
+                placeholder="Email"
+                id="Email"
+                name="email"
+              />
             </div>
-            <CustomInput placeholder="Subject" id="Subject" />
+            <CustomInput
+              type="text"
+              placeholder="Subject"
+              id="Subject"
+              name="subject"
+            />
             <textarea
+              required
+              type="text"
+              name="message"
               id="Message"
               placeholder="Message"
               rows="1"
@@ -53,7 +93,7 @@ const Contact = () => {
             <div className="text-right">
               <CustomButton label="Submit" id="Submit" />
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div className="w-full h-14 bg-primary_blue p-4 flex flex-row justify-center items-center">

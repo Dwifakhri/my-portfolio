@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white lg:hidden p-2 px-6 lg:p-0"
+          className="text-white lg:hidden p-2 px-6 lg:p-0 cursor-pointer"
         >
           {!isOpen ? <BiMenu size={25} /> : <RxCross1 size={20} />}
         </div>

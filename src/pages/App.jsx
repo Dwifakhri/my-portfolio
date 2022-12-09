@@ -4,10 +4,10 @@ import Skills from "../pages/section/Skills";
 import Projects from "../pages/section/Projects";
 import Contact from "../pages/section/Contact";
 import Navbar from "../components/Navbar";
-import { useTitle } from "../utils/useTitle";
+// import { useTitle } from "../utils/useTitle";
 
 const App = () => {
-  useTitle("Dwifakhri - Portfolio");
+  // useTitle("Dwifakhri - Portfolio");
   return (
     <>
       <Navbar />

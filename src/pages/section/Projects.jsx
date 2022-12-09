@@ -38,7 +38,13 @@ const Projects = () => {
         My Recent <span className="text-primary_blue">Projects</span>
       </p>
       <div className="lg:px-6 text-right my-12">
-        <CustomButton label="Show All" id="Show" />
+        <a
+          href="https://github.com/Dwifakhri"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CustomButton label="Show All" id="Show" />
+        </a>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-x-10 gap-y-10 ">
         {myProjects.map((item, index) => (
