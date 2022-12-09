@@ -9,9 +9,9 @@ const Contact = () => {
     <>
       <div
         id="contact"
-        className=" bg-secondary h-auto w-full py-14 px-6 lg:px-14 text-white"
+        className=" bg-secondary h-auto w-full py-10 px-6 lg:px-14 text-white"
       >
-        <p className="font-medium text-5xl text-left mb-16">
+        <p className="font-medium text-5xl text-left mb-8">
           <span className="text-primary_blue">Contact</span> Me
         </p>
         <div className="lg:flex lg:flex-row w-full lg:h-full lg:justify-center space-y-20 lg:space-y-0 lg:space-x-10 text-white font-light break-words">
@@ -56,7 +56,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-16 bg-primary_blue p-4 flex flex-row justify-center items-center">
+      <div className="w-full h-14 bg-primary_blue p-4 flex flex-row justify-center items-center">
         <div className="flex flex-row justify-center items-center space-x-3">
           <div className="bg-white text-[#0A66C2] rounded-full w-max p-2">
             <a
@@ -64,7 +64,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillLinkedin size={30} />
+              <AiFillLinkedin size={25} />
             </a>
           </div>
           <div className="bg-white text-black rounded-full w-max p-2">
@@ -73,7 +73,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillGithub size={30} />
+              <AiFillGithub size={25} />
             </a>
           </div>
           <div className="bg-white text-[#F25A6C] rounded-full w-max p-2">
@@ -82,11 +82,11 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GrInstagram size={30} />
+              <GrInstagram size={25} />
             </a>
           </div>
-          <div className="border-l-2 border-2 h-10 w-1"></div>
-          <p className="text-white text-sm text-light text-left">
+          <div className="w-0 border-2 h-10 "></div>
+          <p className="text-white text-[0.7rem] text-light text-left">
             <span>&copy;</span> 2022 All Rights Reserved By,{" "}
             <span className="font-semibold">
               {" "}

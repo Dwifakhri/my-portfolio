@@ -18,13 +18,13 @@ const Skills = () => {
   return (
     <div
       id="skill"
-      className=" bg-secondary h-auto w-full py-20 px-6 lg:px-14 text-white font-light"
+      className=" bg-secondary h-auto w-full py-16 px-6 lg:px-14 text-white font-light"
     >
       <p className="font-medium text-5xl text-center">
         What <span className="text-primary_blue">Skills</span> I Have for You
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-center my-14  ">
-        <div className="bg-primary w-full p-6 h-auto text-left space-y-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-center my-8  ">
+        <div className="bg-primary w-full p-6 h-auto text-left space-y-4">
           <div className="bg-[#4B5066] text-primary_blue rounded-full w-max p-4">
             <FaLaptopCode size={40} />
           </div>
