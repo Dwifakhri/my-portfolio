@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Poppins";
   list-style: none;
+  box-sizing: border-box;
 }
 
 .active {
