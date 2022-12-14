@@ -7,3 +7,15 @@ body {
   font-family: "Poppins";
   list-style: none;
 }
+
+.active {
+  color: rgba(7, 182, 193, 1);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.my-element {
+  animation: fadeInUp;
+  animation-duration: 1s;
+  --animate-repeat: 2;
+}

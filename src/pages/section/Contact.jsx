@@ -25,7 +25,7 @@ const Contact = () => {
   };
   return (
     <>
-      <div
+      <section
         id="contact"
         className=" bg-secondary h-auto w-full py-10 px-6 lg:px-14 text-white"
       >
@@ -95,7 +95,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      </div>
+      </section>
       <div className="w-full h-14 bg-primary_blue p-4 flex flex-row justify-center items-center">
         <div className="flex flex-row justify-center items-center space-x-3">
           <div className="bg-white text-[#0A66C2] rounded-full w-max p-2">
