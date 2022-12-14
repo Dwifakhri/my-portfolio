@@ -15,7 +15,7 @@ const Home = () => {
             <p className="font-medium text-5xl text-primary_blue">
               Frontend Developer.
             </p>
-            <h1 className="font-medium text-5xl pb-8">
+            <h1 className="font-medium text-4xl pb-8">
               Turn your design into a cool website
             </h1>
             <p className="lg:w-3/4 text-gray-300">
