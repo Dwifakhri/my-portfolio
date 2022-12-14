@@ -4,14 +4,14 @@ import CustomButton from "../../components/CustomButton";
 
 const Home = () => {
   return (
-    <div id="home" className="top-0 bg-primary h-auto w-full py-20 px-6">
+    <section id="home" className="top-0 bg-primary h-auto w-full py-20 px-6 ">
       <div className="lg:flex lg:flex-row w-full lg:h-full lg:justify-center items-center space-y-10 lg:space-x-10 text-white">
-        <div className="lg:w-1/2 flex lg:justify-center items-center">
+        <div className="lg:w-1/2 flex lg:justify-center items-center translate-y-6">
           <img src={photo} />
         </div>
 
         <div className="lg:w-1/2 flex flex-col justify-center space-y-10 font-light text-md">
-          <div className="flex flex-col space-y-1">
+          <div className="flex flex-col space-y-1 translate-y-6">
             <p className="font-medium text-5xl text-primary_blue">
               Frontend Developer.
             </p>
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
