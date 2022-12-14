@@ -25,7 +25,7 @@ const Navbar = () => {
     const list = document.querySelectorAll("li");
     const section = document.querySelectorAll("section");
     let len = section.length;
-    while (--len && window.scrollY + 80 < section[len]?.offsetTop) {}
+    while (--len && window.scrollY + 97 < section[len]?.offsetTop) {}
     list?.forEach((item) => item?.classList.remove("active"));
     list[len]?.classList.add("active");
   };
