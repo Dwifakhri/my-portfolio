@@ -104,7 +104,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillLinkedin size={25} />
+              <AiFillLinkedin size={22} />
             </a>
           </div>
           <div className="bg-white text-black rounded-full w-max p-2">
@@ -113,7 +113,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillGithub size={25} />
+              <AiFillGithub size={22} />
             </a>
           </div>
           <div className="bg-white text-[#F25A6C] rounded-full w-max p-2">
@@ -122,7 +122,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GrInstagram size={25} />
+              <GrInstagram size={22} />
             </a>
           </div>
           <div className="w-0 border-2 h-10 "></div>
