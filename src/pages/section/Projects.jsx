@@ -15,7 +15,7 @@ const Projects = () => {
       desc: "An application which manage the task or submission for mentor and mentee.",
     },
     {
-      name: "Soialta",
+      name: "Sosialta",
       img: social,
       link: "https://github.com/Dwifakhri/sosialta-media",
       desc: "An application which user can create and comment a post to each others",
