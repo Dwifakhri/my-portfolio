@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Slide } from "react-awesome-reveal";
 import poke from "../../assets/ImageProject/poke.svg";
 import mentutor from "../../assets/ImageProject/mentutor.svg";
 import movies21 from "../../assets/ImageProject/movies21.svg";
 import social from "../../assets/ImageProject/social.svg";
+import circlenity from "../../assets/ImageProject/circlenity.svg";
 import CustomButton from "../../components/CustomButton";
 
 const Projects = () => {
+  const [current, setCurrent] = useState(1);
+  const [limit] = useState(4);
+
   const myProjects = [
+    {
+      name: "Circlenity",
+      img: circlenity,
+      link: "https://github.com/Dwifakhri/circlenity-app",
+      desc: "An application which user can create a new friend or post in their circle or community.",
+    },
     {
       name: "Mentutor",
       img: mentutor,
       link: "https://github.com/Dwifakhri/Mentutor",
-      desc: "An application which manage the task or submission for mentor and mentee.",
+      desc: "A tool application which user can manage the task or submission for mentor and mentee.",
     },
     {
       name: "Sosialta",
@@ -20,19 +30,30 @@ const Projects = () => {
       link: "https://github.com/Dwifakhri/sosialta-media",
       desc: "An application which user can create and comment a post to each others",
     },
-    {
-      name: "Movies21",
-      img: movies21,
-      link: "https://github.com/Dwifakhri/movies21-app",
-      desc: "An application that user can see the popular movies in a list. ",
-    },
+
     {
       name: "Pokemon",
       img: poke,
       link: "https://github.com/Dwifakhri/pokemon-app",
       desc: "An application that user can catch the pokemon as a game.",
     },
+    {
+      name: "Movies21",
+      img: movies21,
+      link: "https://github.com/Dwifakhri/movies21-app",
+      desc: "An application that user can see the popular movies in a list. ",
+    },
   ];
+
+  let temp = [];
+  for (let i = 0; i < 2; i++) {
+    temp.push(i);
+  }
+
+  const last = current * limit;
+  const first = last - limit;
+  const currentPojects = myProjects.slice(first, last);
+
   return (
     <section
       id="project"
@@ -41,7 +62,15 @@ const Projects = () => {
       <p className="font-medium text-5xl text-left">
         My Recent <span className="text-primary_blue">Projects</span>
       </p>
-      <div className="lg:px-6 text-right my-8">
+      <div className="lg:px-6 text-right my-8 flex justify-end items-end space-x-2">
+        {temp.map((index) => (
+          <div
+            onClick={() => setCurrent(index + 1)}
+            key={index}
+            className="w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer"
+          />
+        ))}
+
         <a
           href="https://github.com/Dwifakhri?tab=repositories"
           target="_blank"
@@ -52,7 +81,7 @@ const Projects = () => {
       </div>
       <Slide direction="up" cascade triggerOnce={true}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-x-10 gap-y-10 ">
-          {myProjects.map((item, index) => (
+          {currentPojects.map((item, index) => (
             <div
               key={index}
               className="group rounded-none bg-secondary relative transition-shadow hover:shadow-xl hover:shadow-black/30 flex flex-col items-center justify-center overflow-hidden"
