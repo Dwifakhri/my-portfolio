@@ -11,6 +11,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extends: {
+      backgroundColor: ["active"],
+    },
+  },
   plugins: [require("daisyui")],
   daisyui: {
     styled: true,

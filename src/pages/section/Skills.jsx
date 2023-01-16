@@ -8,11 +8,11 @@ const Skills = () => {
   const mySkills = [
     "Javascript",
     "HTML & CSS",
-    "Git",
+    "Postman",
     "React JS",
     "Figma",
     "Adobe Photoshop",
-    "Node Js",
+    "VueJs",
     "Tailwind",
     "Adobe Premiere",
   ];
