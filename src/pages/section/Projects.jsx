@@ -5,6 +5,7 @@ import mentutor from "../../assets/ImageProject/mentutor.svg";
 import movies21 from "../../assets/ImageProject/movies21.svg";
 import social from "../../assets/ImageProject/social.svg";
 import circlenity from "../../assets/ImageProject/circlenity.svg";
+import nouncer from "../../assets/ImageProject/nouncer.svg";
 import CustomButton from "../../components/CustomButton";
 
 const Projects = () => {
@@ -16,32 +17,37 @@ const Projects = () => {
       name: "Circlenity",
       img: circlenity,
       link: "https://github.com/Dwifakhri/circlenity-app",
-      desc: "An application which user can create a new friend or post in their circle or community.",
+      desc: "A web application which user can create a new friend or post in their circle or community.",
     },
     {
       name: "Mentutor",
       img: mentutor,
       link: "https://github.com/Dwifakhri/Mentutor",
-      desc: "A tool application which user can manage the task or submission for mentor and mentee.",
+      desc: "A web application which user can manage the task or submission for mentor and mentee.",
     },
     {
       name: "Sosialta",
       img: social,
       link: "https://github.com/Dwifakhri/sosialta-media",
-      desc: "An application which user can create and comment a post to each others",
+      desc: "A web application which user can create and comment a post to each others.",
     },
-
+    {
+      name: "Nouncer",
+      img: nouncer,
+      link: "https://github.com/Dwifakhri/nouncer-app",
+      desc: "A web application for finding the mean of the word like dictionary.",
+    },
     {
       name: "Pokemon",
       img: poke,
       link: "https://github.com/Dwifakhri/pokemon-app",
-      desc: "An application that user can catch the pokemon as a game.",
+      desc: "A web application that user can catch the pokemon as a game.",
     },
     {
       name: "Movies21",
       img: movies21,
       link: "https://github.com/Dwifakhri/movies21-app",
-      desc: "An application that user can see the popular movies in a list. ",
+      desc: "A web application that user can see the popular movies in a list. ",
     },
   ];
 
@@ -67,7 +73,7 @@ const Projects = () => {
           <div
             onClick={() => setCurrent(index + 1)}
             key={index}
-            className="w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer"
+            className="w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer "
           />
         ))}
 
