@@ -8,13 +8,13 @@ const Skills = () => {
   const mySkills = [
     "Javascript",
     "HTML & CSS",
-    "Postman",
-    "React JS",
+    "Git",
+    "Nuxt (Vue JS)",
+    "Bootstrap",
     "Figma",
-    "Adobe Photoshop",
-    "VueJs",
+    "React JS",
     "Tailwind",
-    "Adobe Premiere",
+    "Postman",
   ];
   return (
     <section

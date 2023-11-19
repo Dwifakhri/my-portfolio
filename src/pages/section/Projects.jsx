@@ -71,9 +71,9 @@ const Projects = () => {
       <div className="lg:px-6 text-right my-8 flex justify-end items-end space-x-2">
         {temp.map((index) => (
           <div
-            onClick={() => setCurrent(index + 1)}
+            onClick={() => { setCurrent(index + 1); changeActive(index) }}
             key={index}
-            className="w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer "
+            className={`${current === index + 1 ? 'active-pro' : ''} w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer`}
           />
         ))}
 
