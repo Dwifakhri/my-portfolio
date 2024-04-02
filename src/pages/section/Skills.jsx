@@ -19,8 +19,7 @@ const Skills = () => {
   return (
     <section
       id="skill"
-      className=" bg-secondary h-auto w-full py-16 px-6 lg:px-14 text-white font-light"
-    >
+      className=" bg-secondary h-auto w-full py-20 px-6 lg:px-14 text-white font-light">
       <p className="font-medium text-5xl text-center">
         What <span className="text-primary_blue">Skills</span> I Have for You
       </p>

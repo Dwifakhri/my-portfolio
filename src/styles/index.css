@@ -16,11 +16,47 @@ body {
 }
 
 .active-pro {
-  background: rgba(7, 182, 193, 1);;
+  background: rgba(7, 182, 193, 1);
 }
 
 .my-element {
   animation: fadeInUp;
   animation-duration: 1s;
   --animate-repeat: 2;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+.slider-container {
+  width: 260px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.slider-text {
+  display: flex;
+  animation: slide 8s infinite; /* Adjust the duration as needed */
+}
+
+.slider-item {
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
 }

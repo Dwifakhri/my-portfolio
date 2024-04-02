@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import photo from "../../assets/photo.svg";
+import { FaArrowRight } from "react-icons/fa";
 import CustomButton from "../../components/CustomButton";
 
 const Home = () => {
@@ -8,7 +10,35 @@ const Home = () => {
     <section id="home" className="top-0 bg-primary h-auto w-full py-20 px-6 ">
       <div className="lg:flex lg:flex-row w-full lg:h-full lg:justify-center items-center space-y-10 lg:space-x-10 text-white">
         <div className="lg:w-1/2 flex lg:justify-center items-center translate-y-6">
-          <img src={photo} />
+          <div className="relative">
+            <img src={photo} />
+            <div className="absolute top-[80%] left-[26px] flex">
+              <div className="slider-container">
+                <div className="slider-text">
+                  <div className="slider-item">
+                    <p className="w-[260px]">2+ Years Experience</p>
+                  </div>
+                  <div className="slider-item">
+                    <p className="w-[260px]">Creative Web Developer</p>
+                  </div>
+                  <div className="slider-item">
+                    <p className="w-[260px]">10+ Total Projects</p>
+                  </div>
+                  <div className="slider-item">
+                    <p className="w-[260px]">Focus on The Goals</p>
+                  </div>
+                  <div className="slider-item">
+                    <p className="w-[260px]">2+ Years Experience</p>
+                  </div>
+                </div>
+              </div>
+              <div className="btn bg-primary rounded-none">
+                <Link smooth to="#contact">
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="lg:w-1/2 flex flex-col justify-center space-y-10 font-light text-md">
@@ -32,8 +62,7 @@ const Home = () => {
             <a
               href="https://docs.google.com/document/d/1HlArPZAp2vw6_IKbBNWyo4yIFO8aneKk/edit?usp=sharing&ouid=113420268688163869452&rtpof=true&sd=true"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <CustomButton label="View CV" id="View" />
             </a>
           </div>

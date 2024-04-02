@@ -27,8 +27,7 @@ const Contact = () => {
     <>
       <section
         id="contact"
-        className=" bg-secondary h-auto w-full py-10 px-6 lg:px-14 text-white"
-      >
+        className=" bg-secondary h-auto w-full py-20 px-6 lg:px-14 text-white">
         <p className="font-medium text-5xl text-left mb-8">
           <span className="text-primary_blue">Contact</span> Me
         </p>
@@ -58,8 +57,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="lg:w-1/2 lg:pl-10 space-y-4 font-light text-md"
-          >
+            className="lg:w-1/2 lg:pl-10 space-y-4 font-light text-md">
             <div className="flex space-x-4">
               <CustomInput
                 type="text"
@@ -96,23 +94,21 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      <div className="w-full h-14 bg-primary_blue p-4 flex flex-row justify-center items-center">
+      <div className="w-full h-16 bg-[#4c5061] p-4 flex flex-row justify-center items-center">
         <div className="flex flex-row justify-center items-center space-x-3">
-          <div className="bg-white text-[#0A66C2] rounded-full w-max p-2">
+          <div className="bg-white text-primary_grey rounded-full w-max p-2">
             <a
               href="https://www.linkedin.com/in/dwi-fakhri-chusaini-5a114518a/"
               target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillLinkedin size={22} />
+              rel="noopener noreferrer">
+              <AiFillLinkedin size={22} color="#0A66C2" />
             </a>
           </div>
           <div className="bg-white text-black rounded-full w-max p-2">
             <a
               href="https://github.com/Dwifakhri"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <AiFillGithub size={22} />
             </a>
           </div>
@@ -120,8 +116,7 @@ const Contact = () => {
             <a
               href="https://www.instagram.com/dwifakhri01/"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <GrInstagram size={22} />
             </a>
           </div>
