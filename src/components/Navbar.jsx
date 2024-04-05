@@ -56,7 +56,7 @@ const Navbar = () => {
       <div
         className={`${
           !isOpen ? "hidden" : "block"
-        } lg:flex flex-col space-y-2 px-6 p-2 lg:p-0 lg:flex-row lg:space-y-0 lg:items-center lg:space-x-10 text-white text-xl font-normal`}
+        } lg:flex flex-col space-y-2 px-6 p-2 lg:p-0 lg:flex-row lg:space-y-0 lg:items-center lg:space-x-10 text-white text-md font-normal`}
       >
         <li>
           <Link smooth to="#home">

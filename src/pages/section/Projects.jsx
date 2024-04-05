@@ -98,10 +98,10 @@ const Projects = () => {
     <section
       id="project"
       className=" bg-primary h-auto w-full py-20 px-6 lg:px-14 text-white font-light">
-      <p className="font-medium text-5xl text-left">
+      <p className="font-medium text-5xl text-left mb-10">
         My Recent <span className="text-primary_blue">Projects</span>
       </p>
-      <div className="lg:px-6 text-right my-8 flex justify-end items-end space-x-2">
+      {/* <div className="lg:px-6 text-right my-8 flex justify-end items-end space-x-2">
         {temp.map((index) => (
           <div
             onClick={() => {
@@ -121,44 +121,65 @@ const Projects = () => {
           rel="noopener noreferrer">
           <CustomButton label="Show All" id="Show" />
         </a>
-      </div>
+      </div> */}
       <Slide direction="up" cascade triggerOnce={true}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-x-10 gap-y-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-10">
           {currentPojects.map((item, index) => (
-            <div
-              key={index}
-              className="cursor-pointer group rounded-none bg-secondary relative transition-shadow hover:shadow-xl hover:shadow-black/30 flex flex-col items-center justify-center overflow-hidden">
-              <div className="h-72">
-                <img
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src={item.img}
-                />
+            <div key={index} className="overflow-hidden text-left">
+              <img
+                className="w-full h-[270px] lg:h-auto cover"
+                src={item.img}
+                alt="Sunset in the mountains"
+              />
+              <div className="py-4">
+                <div className="font-bold text-lg mb-2">{item.name}</div>
+                <p className="text-base text-[13px]">{item.desc}</p>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary group-hover:from-black/50 group-hover:via-black/50 group-hover:to-black/70"></div>
-              <div className="absolute inset-0 flex translate-y-52 flex-col items-center justify-start py-5 px-2 transition-all duration-500 group-hover:translate-y-20">
-                <h1 className="text-2xl font-semibold text-white">
-                  {item.name}
-                </h1>
-                <p className="mb-1 text-md text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {item.desc}
-                </p>
-                <p className="flex mb-2 text-[13px]">
-                  <strong className="pr-1">Stack : </strong>
-                  {item.stack.map((stack, index) => (
-                    <span className="capitalize pr-1 flex">
-                      {stackImage(stack)} {stack}
-                    </span>
-                  ))}
-                </p>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-max rounded-full bg-black py-2 px-5 text-sm capitalize text-white shadow shadow-black/60">
-                  See Detail
-                </a>
-              </div>
+              {/* <div className="pt-2 pb-2">
+              <p className="flex mb-2 text-[14px]">
+                   <strong className="pr-1">Stack : </strong>
+                   {item.stack.map((stack, index) => (
+                     <span key={index} className="capitalize pr-1 flex">
+                       {stackImage(stack)} {stack}
+                     </span>
+                   ))}
+                 </p>
+              </div> */}
             </div>
+            // <div
+            //   key={index}
+            //   className="cursor-pointer group rounded-none bg-secondary relative transition-shadow hover:shadow-xl hover:shadow-black/30 flex flex-col items-center justify-center overflow-hidden">
+            //   <div className="h-72">
+            //     <img
+            //       className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+            //       src={item.img}
+            //     />
+            //   </div>
+            //   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary group-hover:from-black/50 group-hover:via-black/50 group-hover:to-black/70"></div>
+            //   <div className="absolute inset-0 flex translate-y-52 flex-col items-center justify-start py-5 px-2 transition-all duration-500 group-hover:translate-y-20">
+            //     <h1 className="text-2xl font-semibold text-white">
+            //       {item.name}
+            //     </h1>
+            //     <p className="mb-1 text-md text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            //       {item.desc}
+            //     </p>
+            //     <p className="flex mb-2 text-[13px]">
+            //       <strong className="pr-1">Stack : </strong>
+            //       {item.stack.map((stack, index) => (
+            //         <span className="capitalize pr-1 flex">
+            //           {stackImage(stack)} {stack}
+            //         </span>
+            //       ))}
+            //     </p>
+            //     <a
+            //       href={item.link}
+            //       target="_blank"
+            //       rel="noopener noreferrer"
+            //       className="w-max rounded-full bg-black py-2 px-5 text-sm capitalize text-white shadow shadow-black/60">
+            //       See Detail
+            //     </a>
+            //   </div>
+            // </div>
           ))}
         </div>
       </Slide>
