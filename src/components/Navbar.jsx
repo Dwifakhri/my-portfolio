@@ -37,9 +37,9 @@ const Navbar = () => {
     <div
       className={`${
         background
-          ? "transition-transform duration-500 easy-in-out top-[-32px] fixed translate-y-[32px]"
+          ? "bg-secondary transition-transform duration-500 easy-in-out top-[-32px] fixed translate-y-[32px]"
           : "absolute"
-      } w-full px-0 lg:py-4 lg:px-20 flex flex-col lg:flex-row justify-between z-10 bg-primary  shadow-lg`}>
+      } w-full px-0 lg:py-4 lg:px-20 flex flex-col lg:flex-row justify-between z-10 bg-primary shadow-lg`}>
       <div className="flex justify-between items-center">
         <div className=" p-2 px-6 lg:p-0 ">
           <h1 className="text-2xl font-bold">
