@@ -13,7 +13,7 @@ import { FaReact, FaVuejs, FaBootstrap, FaDatabase } from "react-icons/fa";
 
 const Projects = () => {
   const [current, setCurrent] = useState(1);
-  const [limit] = useState(4);
+  const [limit] = useState(6);
 
   const myProjects = [
     {
@@ -45,19 +45,19 @@ const Projects = () => {
       stack: ["react js", "tailwind", "rest"],
     },
     {
-      name: "Pokemon Gatcha",
-      img: poke,
-      link: "https://github.com/Dwifakhri/pokemon-app",
-      desc: "A web application that user can catch the pokemon as a game.",
-      stack: ["react js", "tailwind", "rest"],
-    },
-    {
       name: "Movies21",
       img: movies21,
       link: "https://github.com/Dwifakhri/movies21-app",
       desc: "A web application that user can see the popular movies in a list. ",
       stack: ["react js", "tailwind", "rest"],
     },
+    {
+      name: "Pokemon Gatcha",
+      img: poke,
+      link: "https://github.com/Dwifakhri/pokemon-app",
+      desc: "A web application that user can catch the pokemon as a game.",
+      stack: ["react js", "tailwind", "rest"],
+    }
   ];
 
   const stackImage = (stack) => {

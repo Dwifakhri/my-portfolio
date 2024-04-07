@@ -7,15 +7,13 @@ import Navbar from "../components/Navbar";
 
 const App = () => {
   return (
-    <>
-      <div className="w-full overflow-auto">
+    <div className="w-full overflow-auto relative">
       <Navbar />
-        <Home />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
-    </>
+      <Home />
+      <Skills />
+      <Projects />
+      <Contact />
+    </div>
   );
 };
 
