@@ -101,8 +101,8 @@ const Projects = () => {
       <p className="font-medium text-5xl text-left mb-10">
         My Recent <span className="text-primary_blue">Projects</span>
       </p>
-      {/* <div className="lg:px-6 text-right my-8 flex justify-end items-end space-x-2">
-        {temp.map((index) => (
+      <div className="text-right mb-4 flex justify-end items-end space-x-2">
+        {/* {temp.map((index) => (
           <div
             onClick={() => {
               setCurrent(index + 1);
@@ -113,7 +113,7 @@ const Projects = () => {
               current === index + 1 ? "active-pro" : ""
             } w-10 h-2 bg-secondary active:bg-primary_blue hover:bg-primary_blue cursor-pointer`}
           />
-        ))}
+        ))} */}
 
         <a
           href="https://github.com/Dwifakhri?tab=repositories"
@@ -121,14 +121,16 @@ const Projects = () => {
           rel="noopener noreferrer">
           <CustomButton label="Show All" id="Show" />
         </a>
-      </div> */}
+      </div>
       <Slide direction="up" cascade triggerOnce={true}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-10">
           {currentPojects.map((item, index) => (
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <div
-                key={index}
-                className="overflow-hidden text-left min-h-[350px]">
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer">
+              <div className="overflow-hidden text-left min-h-[350px]">
                 <img
                   className="w-full h-[270px] lg:h-auto cover"
                   src={item.img}

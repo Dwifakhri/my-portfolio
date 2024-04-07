@@ -42,10 +42,12 @@ const Navbar = () => {
       } w-full px-0 lg:py-4 lg:px-20 flex flex-col lg:flex-row justify-between z-10 bg-primary shadow-lg`}>
       <div className="flex justify-between items-center">
         <div className=" p-2 px-6 lg:p-0 ">
-          <h1 className="text-2xl font-bold">
-            <span className="text-white">dwi</span>
-            <span className="text-primary_blue">fakhri</span>
-          </h1>
+          <Link smooth to="#home">
+            <h1 className="text-2xl font-bold">
+              <span className="text-white">dwi</span>
+              <span className="text-primary_blue">fakhri</span>
+            </h1>
+          </Link>
         </div>
 
         <div
@@ -56,7 +58,7 @@ const Navbar = () => {
       </div>
       <div
         className={`${
-          !isOpen ? "hidden" : "block"
+          !isOpen ? "hidden transition-all duration-500" : ""
         } lg:flex flex-col space-y-2 px-6 p-2 lg:p-0 lg:flex-row lg:space-y-0 lg:items-center lg:space-x-10 text-white text-md font-normal`}>
         <li>
           <Link smooth to="#home">
