@@ -34,7 +34,7 @@ const Projects = () => {
       name: "Mentutor",
       img: mentutor,
       link: "https://github.com/Dwifakhri/Mentutor",
-      desc: "A web application which user can manage the task or submission for mentor and mentee.",
+      desc: "A web application which user can manage the task or submission for mentor and mentee. It helps to monitor the students report/activity for mentor and easy to use.",
       stack: ["react js", "tailwind", "rest"],
     },
     {
@@ -48,14 +48,14 @@ const Projects = () => {
       name: "Movies21",
       img: movies21,
       link: "https://movies21-five.vercel.app/",
-      desc: "A web application that user can see the popular movies in a list. ",
+      desc: "A web application that user can see the popular movies in a list. Explore an extensive library of films, discover hidden gems, and stay up-to-date with the latest releases, all from the comfort of your web browser. ",
       stack: ["react js", "tailwind", "rest"],
     },
     {
       name: "Pokemon Gatcha",
       img: poke,
       link: "https://pokemon-app-mauve.vercel.app/",
-      desc: "A web application that user can catch the pokemon as a game.",
+      desc: "A web application that user can catch the pokemon as a game. Many pokemons that you can catch and collect into favorites pokemon",
       stack: ["react js", "tailwind", "rest"],
     },
   ];
