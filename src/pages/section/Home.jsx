@@ -17,7 +17,7 @@ const Home = () => {
                     <p className="w-[260px]">1.5+ Years Experience</p>
                   </div>
                   <div className="slider-item">
-                    <p className="w-[260px]">Creative Web Developer</p>
+                    <p className="w-[260px]">Creative Developer</p>
                   </div>
                   <div className="slider-item">
                     <p className="w-[260px]">10+ Total Projects</p>
@@ -53,7 +53,7 @@ const Home = () => {
             <p className="lg:w-3/4 text-gray-300">
               Responsible for designing the responsive and interactive web
               application. <br />
-              Also applying the principal of frontend standardarization in
+              Also applying the principal of frontend standarization in
               development, optimization, and collaboration.
             </p>
           </div>
