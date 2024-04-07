@@ -14,7 +14,7 @@ const Skills = () => {
     "Figma",
     "React JS",
     "Tailwind",
-    "Postman",
+    "Docker",
   ];
   return (
     <section
