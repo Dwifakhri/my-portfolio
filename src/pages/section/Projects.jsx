@@ -27,7 +27,7 @@ const Projects = () => {
       name: "CV Generator",
       img: cvgen,
       link: "https://cv-builder-jade.vercel.app/",
-      desc: "A web application is used to create an ATS resume or curriculum vitae",
+      desc: "A web application is used to create an ATS resume or curriculum vitae. It assists users in creating professional resumes or CVs tailored to their specific needs",
       stack: ["vue js", "bootstrap", "localstorage"],
     },
     {
@@ -40,24 +40,24 @@ const Projects = () => {
     {
       name: "Nouncer",
       img: nouncer,
-      link: "https://github.com/Dwifakhri/nouncer-app",
-      desc: "A web application for finding the mean of the word like dictionary.",
+      link: "https://nouncer-app.vercel.app/",
+      desc: "A web application for finding the mean of the word like dictionary. Dive into a world of words, definitions, synonyms, antonyms, and more, curated to enhance your understanding and appreciation of language.",
       stack: ["react js", "tailwind", "rest"],
     },
     {
       name: "Movies21",
       img: movies21,
-      link: "https://github.com/Dwifakhri/movies21-app",
+      link: "https://movies21-five.vercel.app/",
       desc: "A web application that user can see the popular movies in a list. ",
       stack: ["react js", "tailwind", "rest"],
     },
     {
       name: "Pokemon Gatcha",
       img: poke,
-      link: "https://github.com/Dwifakhri/pokemon-app",
+      link: "https://pokemon-app-mauve.vercel.app/",
       desc: "A web application that user can catch the pokemon as a game.",
       stack: ["react js", "tailwind", "rest"],
-    }
+    },
   ];
 
   const stackImage = (stack) => {
@@ -125,27 +125,33 @@ const Projects = () => {
       <Slide direction="up" cascade triggerOnce={true}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-10">
           {currentPojects.map((item, index) => (
-            <div key={index} className="overflow-hidden text-left">
-              <img
-                className="w-full h-[270px] lg:h-auto cover"
-                src={item.img}
-                alt="Sunset in the mountains"
-              />
-              <div className="py-4">
-                <div className="font-bold text-lg mb-2">{item.name}</div>
-                <p className="text-base text-[13px]">{item.desc}</p>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <div
+                key={index}
+                className="overflow-hidden text-left min-h-[350px]">
+                <img
+                  className="w-full h-[270px] lg:h-auto cover"
+                  src={item.img}
+                  alt="Sunset in the mountains"
+                />
+                <div className="pb-3 pt-4">
+                  <div className="font-bold text-lg mb-2">{item.name}</div>
+                  <p className="text-base text-[13px]">{item.desc}</p>
+                </div>
+                <div className="pb-2">
+                  <p className="flex mb-2 text-[14px]">
+                    <strong className="pr-1">Stack : </strong>
+                    {item.stack.map((stack, index) => (
+                      <span
+                        key={index}
+                        className="capitalize pr-1 flex items-center">
+                        {stackImage(stack)} {stack}
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </div>
-              {/* <div className="pt-2 pb-2">
-              <p className="flex mb-2 text-[14px]">
-                   <strong className="pr-1">Stack : </strong>
-                   {item.stack.map((stack, index) => (
-                     <span key={index} className="capitalize pr-1 flex">
-                       {stackImage(stack)} {stack}
-                     </span>
-                   ))}
-                 </p>
-              </div> */}
-            </div>
+            </a>
             // <div
             //   key={index}
             //   className="cursor-pointer group rounded-none bg-secondary relative transition-shadow hover:shadow-xl hover:shadow-black/30 flex flex-col items-center justify-center overflow-hidden">
