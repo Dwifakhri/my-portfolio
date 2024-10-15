@@ -4,10 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#353949",
-        secondary: "#282B38",
-        primary_blue: "#07B6C1",
-        primary_gray: "#282B38",
+        primary: "#212032",
+        secondary: "#D1D1D1",
+        darkBlue: "#30324C",
       },
     },
   },
@@ -27,4 +26,4 @@ module.exports = {
     prefix: "",
     darkTheme: "white",
   },
-};
+}
