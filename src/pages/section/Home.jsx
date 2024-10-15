@@ -1,66 +1,36 @@
-import React, { useState } from "react";
-import photo from "../../assets/photo.png";
-import { FaArrowRight } from "react-icons/fa";
+import React from "react"
 
 const Home = () => {
-  const [loading, setloading] = useState(false);
   return (
-    <section id="home" className="top-0 bg-primary h-auto w-full py-20 px-6">
-      <div className="lg:flex lg:flex-row w-full lg:h-full lg:justify-center items-center space-y-10 lg:space-x-10 text-white">
-        <div className="lg:w-1/2 flex lg:justify-center items-center translate-y-6">
-          <div className="relative">
-            <img src={photo} />
-            <div className="absolute top-[80%] left-[26px] flex">
-              <div className="slider-container">
-                <div className="slider-text">
-                  <div className="slider-item">
-                    <p className="w-[260px]">1.5+ Years Experience</p>
-                  </div>
-                  <div className="slider-item">
-                    <p className="w-[260px]">Creative Developer</p>
-                  </div>
-                  <div className="slider-item">
-                    <p className="w-[260px]">10+ Total Projects</p>
-                  </div>
-                  <div className="slider-item">
-                    <p className="w-[260px]">Focus on The Goals</p>
-                  </div>
-                  <div className="slider-item">
-                    <p className="w-[260px]">1.5+ Years Experience</p>
-                  </div>
-                </div>
-              </div>
-              <a
-                href="https://docs.google.com/document/d/1HlArPZAp2vw6_IKbBNWyo4yIFO8aneKk/edit?usp=sharing&ouid=113420268688163869452&rtpof=true&sd=true"
-                target="_blank"
-                rel="noopener noreferrer">
-                <div className="btn bg-primary rounded-none">
-                  <FaArrowRight />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:w-1/2 flex flex-col justify-center space-y-10 font-light text-md">
-          <div className="flex flex-col space-y-3 translate-y-6">
-            <p className="font-medium text-5xl text-primary_blue">
-              Frontend Developer.
-            </p>
-            <h1 className="font-medium text-4xl pb-4">
-              Turn your design into a cool website
-            </h1>
-            <p className="lg:w-3/4 text-gray-300">
-              Responsible for designing the responsive and interactive web
-              application. <br />
-              Also applying the principal of frontend standarization in
-              development, optimization, and collaboration.
-            </p>
-          </div>
-        </div>
+    <section
+      id="home"
+      className="top-0 h-auto w-full py-20 px-6 flex flex-col justify-center text-center items-center text-white">
+      <img
+        src="/ImageProject/myphoto.jpg"
+        alt="myphoto"
+        className="rounded-full mb-2"
+        width={80}
+        height={80}
+      />
+      <h3 className="font-semibold mb-4">Hi, I'm Fakhri 👋</h3>
+      <h2 className="font-medium text-4xl">Frontend Developer.</h2>
+      <h3 className="mt-2 font-normal">
+        Responsible for designing the responsive <br /> and interactive web
+        application.
+      </h3>
+      <div className="flex mt-[5rem] items-center space-x-3 sm:flex-row flex-col">
+        <p className="text-secondary text-sm">
+          2+ years experience with Nuxt and Vue js
+        </p>
+        <a
+          href="#"
+          className="border-white rounded-md border px-3 py-2 text-sm hover:bg-white hover:text-black mt-2 md:mt-0">
+          Get in touch
+        </a>
+        {/* </div> */}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
