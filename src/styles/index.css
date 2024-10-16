@@ -32,3 +32,110 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  12.5% {
+    top: 0;
+  }
+  25% {
+    top: -20px;
+  }
+  37.5% {
+    top: -20px;
+  }
+  50% {
+    top: -40px;
+  }
+  62.5% {
+    top: -40px;
+  }
+  75% {
+    top: -60px;
+  }
+  87.5% {
+    top: -60px;
+  }
+  100% {
+    top: -80px;
+  }
+}
+
+@layer utilities {
+  .animate-slide {
+    animation: slide 9s infinite;
+  }
+}
+
+.skill:hover .text-secondary {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.react:hover {
+  border: 1px solid #61dafb;
+  color: #61dafb;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.react:hover svg {
+  fill: #61dafb;
+  transition: fill 0.2s ease-in-out;
+}
+
+.nuxt:hover {
+  border: 1px solid #00c58e;
+  color: #00c58e;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.nuxt:hover svg {
+  fill: #00c58e;
+  transition: fill 0.2s ease-in-out;
+}
+
+.sass:hover {
+  border: 1px solid #cb6699;
+  color: #cb6699;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.sass:hover svg {
+  fill: #cb6699;
+  transition: fill 0.2s ease-in-out;
+}
+
+.figma:hover {
+  border: 1px solid #f76d5e;
+  color: #f76d5e;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.figma:hover svg {
+  fill: #f76d5e;
+  transition: fill 0.2s ease-in-out;
+}
+
+.express:hover {
+  border: 1px solid #f0db4f;
+  color: #f0db4f;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.express:hover svg {
+  fill: #f0db4f;
+  transition: fill 0.2s ease-in-out;
+}
+
+.docker:hover {
+  border: 1px solid #23c2ee;
+  color: #23c2ee;
+  transition: color 0.2s ease-in-out, border 0.2s ease;
+}
+
+.docker:hover svg {
+  fill: #23c2ee;
+  transition: fill 0.2s ease-in-out;
+}

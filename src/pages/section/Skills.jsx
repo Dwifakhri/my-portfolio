@@ -1,4 +1,5 @@
 import React from "react"
+import { loadSvg } from "../../utils/loadSvg"
 import { Slide } from "react-awesome-reveal"
 
 const Skills = () => {
@@ -49,12 +50,8 @@ const Skills = () => {
           {frameWorks.map((item, i) => (
             <div
               key={i}
-              className="border-[#353448] w-full p-6 h-auto text-left border rounded-md">
-              <img
-                src={`/icon/${item.frame}.svg`}
-                alt={item.frame}
-                className="mb-2"
-              />
+              className={`${item.frame} skill border-[#353448] w-full p-6 h-auto text-left border rounded-m`}>
+              {loadSvg(item.frame)}
               <p className="font-semibold text-xl capitalize">
                 {item.frame === "nuxt" ||
                 item.frame === "react" ||
