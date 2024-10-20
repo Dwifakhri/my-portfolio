@@ -44,7 +44,7 @@ export const myProjects = [
   {
     name: "Movies21",
     img: "movies21",
-    link: "https://movies21-five.vercel.app/",
+    link: "https://movies21-app.vercel.app/",
     desc: "A web application that user can see the popular movies in a list. Explore an extensive library of films, discover hidden gems, and stay up-to-date with the latest releases, all from the comfort of your web browser. ",
     stack: ["react js", "tailwind", "rest"],
   },
