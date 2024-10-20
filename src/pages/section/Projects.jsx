@@ -98,12 +98,7 @@ const Projects = () => {
                     (item, index) =>
                       index < itemx &&
                       index >= itemx - limit && (
-                        <a
-                          key={index}
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mb-3 lg:mb-0">
+                        <div key={index} className="mb-3 lg:mb-0">
                           <div className="grid grid-cols-12 lg:items-center">
                             <div
                               className={`col-span-12 lg:col-span-6 mb-4 ${
@@ -138,10 +133,17 @@ const Projects = () => {
                                     ))}
                                   </p>
                                 </div>
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[12px] text-secondary hover:text-white hover:underline">
+                                  See detail
+                                </a>
                               </div>
                             </div>
                           </div>
-                        </a>
+                        </div>
                       )
                   )}
                 </div>

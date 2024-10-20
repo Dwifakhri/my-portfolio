@@ -28,7 +28,7 @@ const Home = () => {
               5+ total end to end projects client
             </p>
             <p className="block text-secondary text-sm">
-              15% performance of web application
+              (80%+) Performance score of web app
             </p>
             <p className="block text-secondary text-sm">
               10% improvement UI/UX enhanced
