@@ -16,7 +16,7 @@ export const myProjects = [
   {
     name: "Bantul Mapan",
     img: "siekodig",
-    link: "https://bantulmapan.kab-bantul.id/",
+    link: "https://bantulmapan.bantulkab.go.id/",
     desc: "A web application which aims to analyze and present statistical data of Micro, Small, and Medium Enterprises (MSMEs) in Bantul District, Indonesia.",
     stack: ["nuxt js", "bootstrap", "rest"],
   },
@@ -55,4 +55,4 @@ export const myProjects = [
     desc: "A web application that user can catch the pokemon as a game. Many pokemons that you can catch and collect into favorites pokemon",
     stack: ["react js", "tailwind", "rest"],
   },
-]
+];

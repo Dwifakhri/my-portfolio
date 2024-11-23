@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react"
-import { HashLink as Link } from "react-router-hash-link"
+import React, { useEffect, useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [background, setBackground] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [background, setBackground] = useState(false);
 
-  var pos = window.scrollY
+  var pos = window.scrollY;
   window.addEventListener("scroll", function name() {
     if (pos > window.scrollY && window.scrollY > 64) {
-      setBackground(true)
+      setBackground(true);
     } else {
-      setBackground(false)
+      setBackground(false);
     }
-    pos = window.scrollY
-  })
+    pos = window.scrollY;
+  });
 
   useEffect(() => {
-    activeMenu()
-  })
+    activeMenu();
+  });
 
   const activeMenu = () => {
-    const list = document.querySelectorAll("li")
-    const section = document.querySelectorAll("section")
-    let len = section.length
+    const list = document.querySelectorAll("li");
+    const section = document.querySelectorAll("section");
+    let len = section.length;
     while (--len && window.scrollY + 97 < section[len]?.offsetTop) {}
-    list?.forEach((item) => item?.classList.remove("active"))
-    list[len]?.classList.add("active")
-  }
-  activeMenu()
-  window.addEventListener("scroll", activeMenu)
+    list?.forEach((item) => item?.classList.remove("active"));
+    list[len]?.classList.add("active");
+  };
+  activeMenu();
+  window.addEventListener("scroll", activeMenu);
 
   return (
     <div
@@ -58,8 +58,10 @@ const Navbar = () => {
       </div>
       <div
         className={`${
-          !isOpen ? "hidden transition-all duration-500" : ""
-        } lg:flex flex-col space-y-2 px-6 p-2 lg:p-0 lg:flex-row lg:space-y-0 lg:items-center lg:space-x-10 text-white text-md font-light`}>
+          !isOpen
+            ? "h-0 overflow-hidden transition-all duration-500 ease-in-out transform translate-y-[-20px] opacity-0"
+            : "h-full p-2 transition-all duration-500 ease-in-out transform translate-y-0 opacity-100"
+        } lg:h-auto lg:overflow-visible lg:translate-y-0 lg:opacity-100 lg:transition-none lg:flex flex-col space-y-2 px-6 lg:p-0 lg:flex-row lg:space-y-0 lg:items-center lg:space-x-10 text-white text-md font-light`}>
         <li>
           <Link smooth to="#home">
             Home
@@ -82,7 +84,7 @@ const Navbar = () => {
         </li>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
