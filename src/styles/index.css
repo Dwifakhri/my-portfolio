@@ -13,6 +13,15 @@ body {
   font-weight: 500;
 }
 
+#nav li {
+  min-width: 70px;
+}
+
+#nav li:hover {
+  transition: 200ms;
+  font-weight: 500;
+}
+
 .my-element {
   animation: fadeInUp;
   animation-duration: 1s;
