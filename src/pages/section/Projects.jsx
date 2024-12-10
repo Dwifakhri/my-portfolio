@@ -1,63 +1,67 @@
-import React, { useState } from "react"
-import { Slide } from "react-awesome-reveal"
-import { myProjects } from "../../utils/projects"
+import React, { useEffect, useState } from "react";
+import { Slide } from "react-awesome-reveal";
+import { myProjects } from "../../utils/projects";
 
 const Projects = () => {
-  const [limit] = useState(3)
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [limit] = useState(3);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalProject, setModalProject] = useState(null);
 
-  const totalCard = []
+  const totalCard = [];
   for (let index = 1; index <= myProjects.length / limit; index++) {
-    totalCard.push(index * limit)
+    totalCard.push(index * limit);
   }
   if (myProjects.length % limit) {
-    totalCard.push(myProjects.length)
+    totalCard.push(myProjects.length);
   }
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === totalCard.length - 1 ? 0 : prev + 1))
-  }
+    setCurrentSlide((prev) => (prev === totalCard.length - 1 ? 0 : prev + 1));
+  };
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? totalCard.length - 1 : prev - 1))
-  }
+    setCurrentSlide((prev) => (prev === 0 ? totalCard.length - 1 : prev - 1));
+  };
+
+  const openModal = (project) => {
+    setModalProject(project);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalProject(null);
+  };
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalOpen]);
 
   const stackImage = (stack) => {
-    switch (stack) {
-      case "nuxt js":
-        return (
-          <img
-            src="/icon/nuxtjs.svg"
-            alt="vue js"
-            width={20}
-            height={20}
-            className="mr-1"
-          />
-        )
+    const stackIcons = {
+      "nuxt js": "/icon/nuxtjs.svg",
+      "react js": "/icon/reactjs.svg",
+      "next js": "/icon/nextjs.svg",
+    };
 
-      case "react js":
-        return (
-          <img
-            src="/icon/reactjs.svg"
-            alt="react js"
-            width={20}
-            height={20}
-            className="mr-1"
-          />
-        )
-
-      default:
-        return (
-          <img
-            src={`/icon/${stack}.svg`}
-            alt={stack}
-            width={20}
-            height={20}
-            className="mr-1"
-          />
-        )
-    }
-  }
+    return (
+      <img
+        src={stackIcons[stack] || `/icon/${stack}.svg`}
+        alt={stack}
+        width={20}
+        height={20}
+        className="mr-1"
+      />
+    );
+  };
 
   return (
     <section
@@ -66,14 +70,6 @@ const Projects = () => {
       <p className="font-medium text-4xl text-center mb-10">
         Projects and Products
       </p>
-      {/* <div className="text-right mb-4 flex justify-end items-end space-x-2"> */}
-      {/* <a
-          href="https://github.com/Dwifakhri?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer">
-          <CustomButton label="Show All" id="Show" />
-        </a> */}
-      {/* </div> */}
       <Slide direction="up" cascade triggerOnce={true}>
         <div className="grid grid-cols-12 lg:mx-[5rem]">
           {currentSlide !== 0 && (
@@ -81,7 +77,7 @@ const Projects = () => {
               <img
                 onClick={handlePrev}
                 src="/icon/arrow-left.svg"
-                alt="arrow-left"
+                alt="Previous Slide"
                 width={30}
                 height={30}
                 className="opacity-70 hover:opacity-100 cursor-pointer"
@@ -93,26 +89,29 @@ const Projects = () => {
               className="flex transition-transform ease-in-out duration-1000"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
               {totalCard.map((itemx, i) => (
-                <div key={i} className="w-full flex-shrink-0">
+                <div key={i} className="w-full flex-shrink-0 px-1">
                   {myProjects.map(
                     (item, index) =>
                       index < itemx &&
                       index >= itemx - limit && (
-                        <div key={index} className="mb-3 lg:mb-0">
-                          <div className="grid grid-cols-12 lg:items-center">
+                        <div key={index} className="mb-10 lg:mb-4">
+                          <div className="grid grid-cols-12 lg:grid-cols-11 lg:items-center">
                             <div
-                              className={`col-span-12 lg:col-span-6 mb-4 ${
-                                index % 2 !== 0 ? "lg:ml-10" : ""
-                              }`}>
+                              onClick={() => openModal(item)}
+                              className={`block col-span-12 mb-4 lg:col-span-5 ${
+                                index % 2 !== 0 ? "lg:col-start-7" : ""
+                              } cursor-pointer`}>
                               <img
-                                className="h-auto w-auto cover rounded-lg"
-                                src={`/ImageProject/${item.img}.png`}
+                                className="cover rounded-lg hover:opacity-60"
+                                src={`/ImageProject/${item.img}.jpg`}
                                 alt={item.img}
                               />
                             </div>
                             <div
-                              className={`col-span-12 lg:col-span-6 text-left ${
-                                index % 2 !== 0 ? "lg:order-first" : "lg:ml-10"
+                              className={`col-span-12 text-left lg:col-span-5 ${
+                                index % 2 !== 0
+                                  ? "lg:order-first "
+                                  : "lg:col-start-7"
                               }`}>
                               <div>
                                 <div className="font-bold text-xl mb-2">
@@ -133,13 +132,15 @@ const Projects = () => {
                                     ))}
                                   </p>
                                 </div>
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-[12px] text-secondary hover:text-white hover:underline">
-                                  See detail
-                                </a>
+                                <div className="lg:mt-2">
+                                  <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className=" rounded-full px-5 py-2 border border-white hover:bg-white hover:text-black hover:font-medium text-[12px]">
+                                    <button>See detail</button>
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -155,7 +156,7 @@ const Projects = () => {
               <img
                 onClick={handleNext}
                 src="/icon/arrow-right.svg"
-                alt="arrow-left"
+                alt="Next Slide"
                 width={30}
                 height={30}
                 className="opacity-70 hover:opacity-100 cursor-pointer"
@@ -164,8 +165,24 @@ const Projects = () => {
           )}
         </div>
       </Slide>
+      {modalOpen && modalProject && (
+        <div className="fixed top-50 inset-0 bg-black h-full bg-opacity-70 flex justify-center items-center z-50 top-1/2 transform -translate-y-1/2">
+          <div className="bg-dark-50 p-6 rounded-lg lg:max-w-5xl text-black relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-black">
+              ✕
+            </button>
+            <img
+              src={`/ImageProject/${modalProject.img}.jpg`}
+              alt={modalProject.name}
+              className="w-full rounded-lg mb-4"
+            />
+          </div>
+        </div>
+      )}
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

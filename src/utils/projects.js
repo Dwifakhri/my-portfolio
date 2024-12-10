@@ -1,10 +1,17 @@
 export const myProjects = [
   {
-    name: "Real Time Chat",
-    img: "chatapp",
-    link: "https://github.com/Dwifakhri/chat-app",
-    desc: "A web application is used to personal chat in real time. Its feature can join or leave group with other users. Its providing a fluid and responsive chat experience.",
-    stack: ["vue", "bootstrap", "express"],
+    name: "My Expedition",
+    img: "myexpedition",
+    link: "https://my-expedition-app.vercel.app/",
+    desc: "A web application is used to streamline the logistics of transporting goods, ensuring secure and efficient delivery for businesses and individuals.",
+    stack: ["next js", "tailwind", "figma"],
+  },
+  {
+    name: "Black Market",
+    img: "blackmarket",
+    link: "https://github.com/Dwifakhri/black-marketplace",
+    desc: "Black Market App is a cutting-edge ecommerce platform tailored specifically for gadget enthusiasts and tech-savvy shoppers.",
+    stack: ["react js", "tailwind", "express"],
   },
   {
     name: "Meeting Transcript",
@@ -21,6 +28,20 @@ export const myProjects = [
     stack: ["nuxt js", "bootstrap", "rest"],
   },
   {
+    name: "Netray Media Monitoring",
+    img: "nmm",
+    link: "https://monitoring.netray.id/",
+    desc: "A media monitoring platform based on big data analytics, deep learning, and sentiment analysis which inform what is happening on social media and online news media.",
+    stack: ["nuxt js", "bootstrap", "rest"],
+  },
+  {
+    name: "Real Time Chat",
+    img: "chatapp",
+    link: "https://github.com/Dwifakhri/chat-app",
+    desc: "A web application is used to personal chat in real time. Its feature can join or leave group with other users. Its providing a fluid and responsive chat experience.",
+    stack: ["vue", "bootstrap", "express"],
+  },
+  {
     name: "CV Generator",
     img: "cvgen",
     link: "https://cv-builder-jade.vercel.app/",
@@ -35,24 +56,24 @@ export const myProjects = [
     stack: ["react js", "tailwind", "rest"],
   },
   {
-    name: "Nouncer",
-    img: "nouncer",
-    link: "https://nouncer-app.vercel.app/",
-    desc: "A web application for finding the mean of the word like dictionary. Dive into a world of words, definitions, synonyms, antonyms, and more, curated to enhance your understanding and appreciation of language.",
-    stack: ["react js", "tailwind", "rest"],
-  },
-  {
     name: "Movies21",
     img: "movies21",
     link: "https://movies21-app.vercel.app/",
     desc: "A web application that user can see the popular movies in a list. Explore an extensive library of films, discover hidden gems, and stay up-to-date with the latest releases, all from the comfort of your web browser. ",
     stack: ["react js", "tailwind", "rest"],
   },
-  {
-    name: "Pokemon Gatcha",
-    img: "poke",
-    link: "https://pokemon-app-mauve.vercel.app/",
-    desc: "A web application that user can catch the pokemon as a game. Many pokemons that you can catch and collect into favorites pokemon",
-    stack: ["react js", "tailwind", "rest"],
-  },
+  // {
+  //   name: "Nouncer",
+  //   img: "nouncer",
+  //   link: "https://nouncer-app.vercel.app/",
+  //   desc: "A web application for finding the mean of the word like dictionary. Dive into a world of words, definitions, synonyms, antonyms, and more, curated to enhance your understanding and appreciation of language.",
+  //   stack: ["react js", "tailwind", "rest"],
+  // },
+  // {
+  //   name: "Pokemon Gatcha",
+  //   img: "poke",
+  //   link: "https://pokemon-app-mauve.vercel.app/",
+  //   desc: "A web application that user can catch the pokemon as a game. Many pokemons that you can catch and collect into favorites pokemon",
+  //   stack: ["react js", "tailwind", "rest"],
+  // },
 ];

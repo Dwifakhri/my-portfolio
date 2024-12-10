@@ -1,16 +1,16 @@
-import React from "react"
-import { loadSvg } from "../../utils/loadSvg"
-import { Slide } from "react-awesome-reveal"
+import React from "react";
+import { loadSvg } from "../../utils/loadSvg";
+import { Slide } from "react-awesome-reveal";
 
 const Skills = () => {
   const frameWorks = [
     {
       frame: "nuxt",
-      desc: "App dir , SSR and CSR mode, Middleware Auth, API Routing, Loading UI, and Layouts.",
+      desc: "App dir , SSR and CSR mode, Middleware Auth, API Routing, Bootstrap CSS and Layouts.",
     },
     {
-      frame: "react",
-      desc: "Single Page Application, Reusable Components, and Tailwind CSS.",
+      frame: "next",
+      desc: "App dir , SSR, API Routing, Loading UI, Tailwind CSS and Layouts.",
     },
     {
       frame: "sass",
@@ -28,16 +28,17 @@ const Skills = () => {
       frame: "docker",
       desc: "Local Deployment, Containerized App with Kubernetes, and Setup Docker File.",
     },
-  ]
+  ];
   const techs = [
     "javascript",
     "vue",
+    "react",
     "laravel",
     "bootstrap",
     "tailwind",
     "git",
     "kubernetes",
-  ]
+  ];
   return (
     <section
       id="skill"
@@ -54,8 +55,8 @@ const Skills = () => {
               {loadSvg(item.frame)}
               <p className="font-semibold text-xl capitalize">
                 {item.frame === "nuxt" ||
-                item.frame === "react" ||
-                item.frame === "express"
+                item.frame === "express" ||
+                item.frame === "next"
                   ? `${item.frame}.js`
                   : item.frame}
               </p>
@@ -72,7 +73,7 @@ const Skills = () => {
         </div>
       </Slide>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
