@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Home = () => {
   return (
@@ -25,7 +25,7 @@ const Home = () => {
               2+ years experience with Nuxt and Vue js
             </p>
             <p className="block text-secondary text-sm">
-              5+ total end to end projects client
+              7+ total end to end projects client
             </p>
             <p className="block text-secondary text-sm">
               (80%+) Performance score of web app
@@ -47,7 +47,7 @@ const Home = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

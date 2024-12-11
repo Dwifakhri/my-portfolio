@@ -10,16 +10,7 @@ body {
 }
 
 .active {
-  font-weight: 500;
-}
-
-#nav li {
-  min-width: 70px;
-}
-
-#nav li:hover {
-  transition: 200ms;
-  font-weight: 500;
+  border-top: solid 3px #23c2ee;
 }
 
 .my-element {
@@ -83,14 +74,14 @@ body {
   transition: color 0.2s ease-in-out;
 }
 
-.react:hover {
-  border: 1px solid #61dafb;
-  color: #61dafb;
+.next:hover {
+  border: 1px solid #e5e5e5;
+  color: #e5e5e5;
   transition: color 0.2s ease-in-out, border 0.2s ease;
 }
 
-.react:hover svg {
-  fill: #61dafb;
+.next:hover svg {
+  fill: #e5e5e5;
   transition: fill 0.2s ease-in-out;
 }
 
