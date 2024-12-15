@@ -114,8 +114,18 @@ const Projects = () => {
                                   : "lg:col-start-7"
                               }`}>
                               <div>
-                                <div className="font-bold text-xl mb-2">
-                                  {item.name}
+                                <div className="flex gap-x-3 items-center mb-2">
+                                  <div className="font-bold text-xl">
+                                    {item.name}
+                                  </div>
+                                  <div
+                                    className={`text-[10px] text-white mb-0 rounded-md px-2 py-1 font-medium capitalize h-fit ${
+                                      item.status === "active"
+                                        ? "bg-[#FFAB2E]"
+                                        : "bg-[#1FCB69]"
+                                    }`}>
+                                    {item.status}
+                                  </div>
                                 </div>
                                 <p className="text-secondary text-[14px]">
                                   {item.desc}
