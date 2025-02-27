@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef } from "react";
 
 const Contact = () => {
   return (
@@ -33,6 +33,13 @@ const Contact = () => {
           <img src="/icon/github.svg" alt="github" />
         </a>
         <a
+          href="https://medium.com/@fakhri.chusaini01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full p-3 bg-[#30324C] w-[50px] h-[50px] flex justify-center items-center hover:bg-[#474A6A]">
+          <img src="/icon/medium.svg" alt="medium" />
+        </a>
+        <a
           href="https://www.instagram.com/dwifakhri01/"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +52,7 @@ const Contact = () => {
         <span className="font-semibold">Dwi Fakhri C</span>
       </p>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
