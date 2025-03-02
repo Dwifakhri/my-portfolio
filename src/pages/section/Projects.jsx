@@ -49,7 +49,7 @@ const Projects = () => {
     const stackIcons = {
       "nuxt js": "/icon/nuxtjs.svg",
       "react js": "/icon/reactjs.svg",
-      "next js": "/icon/nextjs.svg",
+      "next js": "/icon/nextjs.svg"
     };
 
     return (
@@ -142,15 +142,17 @@ const Projects = () => {
                                     ))}
                                   </p>
                                 </div>
-                                <div className="lg:mt-2">
-                                  <a
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className=" rounded-full px-5 py-2 border border-white hover:bg-white hover:text-black hover:font-medium text-[12px]">
-                                    <button>See detail</button>
-                                  </a>
-                                </div>
+                                {item.isPubslihed && (
+                                  <div className="lg:mt-2">
+                                    <a
+                                      href={item.link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className=" rounded-full px-5 py-2 border border-white hover:bg-white hover:text-black hover:font-medium text-[12px]">
+                                      <button>See detail</button>
+                                    </a>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>
