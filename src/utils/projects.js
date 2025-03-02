@@ -1,5 +1,6 @@
 export const myProjects = [
   {
+    isPubslihed: true,
     name: "My Expedition",
     img: "myexpedition",
     link: "https://my-expedition-app.vercel.app/",
@@ -8,14 +9,16 @@ export const myProjects = [
     status: "active"
   },
   {
-    name: "Black Market",
+    isPubslihed: false,
+    name: "Black Marketplace",
     img: "blackmarket",
     link: "https://github.com/Dwifakhri/black-marketplace",
-    desc: "Black Market App is a cutting-edge ecommerce platform tailored specifically for gadget enthusiasts and tech-savvy shoppers.",
+    desc: "Black Marketplace App is a cutting-edge ecommerce platform tailored specifically for gadget enthusiasts and tech-savvy shoppers.",
     stack: ["next js", "tailwind", "express", "mysql"],
     status: "active"
   },
   {
+    isPubslihed: true,
     name: "Meeting Transcript",
     img: "transcript",
     link: "https://transcript.netray.id/",
@@ -24,6 +27,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "Bantul Mapan",
     img: "siekodig",
     link: "https://bantulmapan.bantulkab.go.id/",
@@ -32,6 +36,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "Netray Media Monitoring",
     img: "nmm",
     link: "https://monitoring.netray.id/",
@@ -40,6 +45,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "Real Time Chat",
     img: "chatapp",
     link: "https://github.com/Dwifakhri/chat-app",
@@ -48,6 +54,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "CV Generator",
     img: "cvgen",
     link: "https://cv-builder-jade.vercel.app/",
@@ -56,6 +63,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "Mentutor",
     img: "mentutor",
     link: "https://github.com/Dwifakhri/Mentutor",
@@ -64,6 +72,7 @@ export const myProjects = [
     status: "completed"
   },
   {
+    isPubslihed: true,
     name: "Movies21",
     img: "movies21",
     link: "https://movies21-app.vercel.app/",
