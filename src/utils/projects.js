@@ -1,11 +1,20 @@
 export const myProjects = [
+  // {
+  //   isPubslihed: false,
+  //   name: "My Expedition",
+  //   img: "myexpedition",
+  //   link: "https://my-expedition-app.vercel.app/",
+  //   desc: "A web application is used to streamline the logistics of transporting goods, ensuring secure and efficient delivery for businesses and individuals.",
+  //   stack: ["next js", "tailwind", "figma"],
+  //   status: "active"
+  // },
   {
-    isPubslihed: true,
-    name: "My Expedition",
-    img: "myexpedition",
-    link: "https://my-expedition-app.vercel.app/",
-    desc: "A web application is used to streamline the logistics of transporting goods, ensuring secure and efficient delivery for businesses and individuals.",
-    stack: ["next js", "tailwind", "figma"],
+    isPubslihed: false,
+    name: "Katherine AI Web ",
+    img: "katherine",
+    link: "https://katherine-dev.atmatech.id/",
+    desc: "A medical chatbot which used Artificial Intelligence to diagnose. assist with diagnoses and answer all medical-related questions.",
+    stack: ["next js", "tailwind", "mongodb"],
     status: "active"
   },
   {
